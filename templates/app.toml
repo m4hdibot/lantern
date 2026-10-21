@@ -1,0 +1,27 @@
+manifest_version = 1
+
+[meta]
+name = "ExampleApp"
+version = "0.0.1"
+author = "John Doe"
+license = "MIT"
+
+# Nested table for plugin metadata, keyed by plugin name
+[meta.plugin-meta.flathub]
+appid = "com.example.ExampleApp"
+remote = "flathub"
+
+# Scripts — each is a table with a run_cmd array
+[scripts.launch]
+run_cmd = ["flatpak", "run", "<APPID>"]
+
+[scripts.remove]
+run_cmd = ["flatpak", "uninstall", "<APPID>"]
+
+[scripts.update]
+run_cmd = ["flatpak", "update", "<APPID>"]
+
+# Script variables — typed references into the manifest
+[scriptvars.APPID]
+type = "appdata-ref"
+value.path = "meta.plugin-meta.flathub.appid"

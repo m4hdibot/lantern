@@ -1,0 +1,10 @@
+[meta]
+name = "Flathub"
+version = "1.0"
+author = "John Doe"
+desc = """
+This is a unofficial FlatHub plugin for Lantern. It renders everything and installs anything from Flathub
+"""
+[features]
+list = ["install", "update", "list", "search"]
+[features.install]

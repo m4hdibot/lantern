@@ -1,0 +1,11 @@
+[info]
+name = "Lantern"
+version = "v1.0-alpha"
+author = "Mahdiar Zoalfaquari"
+year = "2026"
+license = "MIT"
+[config]
+configdir = "config"
+[config.files]
+common = "common.toml"
+
